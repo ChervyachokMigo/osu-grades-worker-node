@@ -1,0 +1,14 @@
+{
+	"WORKER_SERVER_PORT": 6969,
+
+	"api_key": "set_your_v1_key",
+
+	"api_v2_app_id": "set_your_app_id",
+	"api_v2_app_key": "set_your_v2_key",
+
+	"is_use_caching": true,
+	"is_delete_cache": true,
+	"cache_expire_time_hours": 24,
+
+	"api_version": 2
+}
