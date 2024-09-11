@@ -2,6 +2,7 @@ const { WebSocket } = require('ws');
 const config = require('../config_control.js');
 const { isJSON } = require('../../tools/misc.js');
 const get_scores_loop_async = require('../../tools/loops/get_scores_loop_async.js');
+const { get_servers_list } = require('../servers_list.js');
 
 const clients = [];
 
@@ -75,6 +76,9 @@ const _this = module.exports = {
 						case 'ping':
 							response_data = 'pong';                        
 							break;
+						case 'get_servers_list':
+							response_data = await get_servers_list(worker_name.address);
+                            break;
 						case 'get_scores_v2':
 							response_data = await get_scores_loop_async({ args: {...request_data }, score_mode: 2 });
                             break;

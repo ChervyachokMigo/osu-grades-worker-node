@@ -10,5 +10,7 @@
 	"is_delete_cache": true,
 	"cache_expire_time_hours": 24,
 
-	"api_version": 2
+	"api_version": 2,
+
+	"main_server": "5.189.79.51"
 }

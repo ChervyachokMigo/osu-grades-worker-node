@@ -12,6 +12,7 @@ module.exports = {
 	osu_token_path: path.join('data', 'osu_token.json'),
 	cache_path: path.join( 'data', 'cache' ),
 	config_path: path.join('data', 'config.json'),
-	default_config_path: path.join( __dirname, '..', 'misc', 'config-sample.json')
+	default_config_path: path.join( __dirname, '..', 'misc', 'config-sample.json'),
+	servers_list_path: path.join( 'data', 'servers.json' ),
 };
 
