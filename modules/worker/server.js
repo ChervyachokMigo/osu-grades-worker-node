@@ -96,7 +96,7 @@ const _this = module.exports = {
 				});
 
 				clients.push(client); 
-
+				
 			});
 		});
 	},

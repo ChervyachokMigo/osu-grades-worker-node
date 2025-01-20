@@ -47,11 +47,11 @@ const get_main_servers_list = async () => {
 let server_ip = null;
 
 const _this = module.exports = {
-	save_severs_list: ( data ) => writeFileSync(servers_list_path, JSON.stringify( servers_list )),
+	save_severs_list: ( data ) => writeFileSync(servers_list_path, JSON.stringify( data )),
 
 	add_host: async (hostname, port) => {
 		const new_host = { hostname, port };
-		if (servers_list.findIndex( v => v.hostname === hostname ) === -1 ){
+		if (servers_list.findIndex( v => v.hostname === hostname && v.port === port ) === -1 ){
 			servers_list.push(new_host);
 			_this.save_severs_list(servers_list);
 		}

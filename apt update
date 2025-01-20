@@ -1,0 +1,11 @@
+apt update
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm install v21.4.0
+wget https://github.com/ChervyachokMigo/osu-grades-worker-node/archive/refs/heads/main.zip
+sudo apt install p7zip-full p7zip-rar -y
+7z x main.zip
+cd osu-grades-worker-node-main/
+npm i
+node index.js
+
+apt-get install iptables -y
